@@ -248,25 +248,6 @@
       ]
     }
   ],
-  "unlinked-trees": [
-    {
-      "name": "orderData",
-      "id": "d73bc2dc-13cf-4f95-bd2f-8dfecc21089b",
-      "type": "waitUntil",
-      "meta": {
-        "nodesInfo": [
-          {
-            "id": "d73bc2dc-13cf-4f95-bd2f-8dfecc21089b",
-            "position": "3062.5,642.5"
-          }
-        ],
-        "editorObjects": []
-      },
-      "condition": [
-        "return loc.orderData ~= nil"
-      ]
-    }
-  ],
   "meta": {
     "nodesInfo": [
       {

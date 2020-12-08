@@ -1,0 +1,64 @@
+{
+  "name": "move and observe",
+  "id": "39440b8e-6008-4088-a969-fa23cae39319",
+  "type": "sequence",
+  "subtrees": [
+    {
+      "name": "2 secs",
+      "id": "bfca64b0-1b06-40f1-8d1c-4e0355177c8e",
+      "type": "wait",
+      "time": [
+        "return 2"
+      ]
+    },
+    {
+      "name": "Crouched",
+      "id": "05edadf5-ef29-4dcb-a772-32af6530fab8",
+      "type": "setStance",
+      "stance": [
+        "return Stance.Crouched"
+      ]
+    },
+    {
+      "name": "Wait forever",
+      "id": "bcf35693-18e7-450f-ada2-ea99c77289a1",
+      "type": "waitForever"
+    }
+  ],
+  "meta": {
+    "nodesInfo": [
+      {
+        "id": "39440b8e-6008-4088-a969-fa23cae39319",
+        "position": "1487.5,231.641666666667"
+      },
+      {
+        "id": "bfca64b0-1b06-40f1-8d1c-4e0355177c8e",
+        "position": "1358,336.641666666667"
+      },
+      {
+        "id": "05edadf5-ef29-4dcb-a772-32af6530fab8",
+        "position": "1537.5,331.641666666667"
+      },
+      {
+        "id": "bcf35693-18e7-450f-ada2-ea99c77289a1",
+        "position": "1737.5,344.141666666667"
+      }
+    ],
+    "editorObjects": [],
+    "canvasSize": "3840,3371.14166666667",
+    "gridPadding": "0,6.64166666666658"
+  },
+  "parameters": [
+    {
+      "name": "orderData",
+      "isOptional": false,
+      "defaultValue": ""
+    }
+  ],
+  "locals": {
+    "suborderData": "return nil",
+    "headingDiff": "return nil",
+    "openTerrainProbability": "0",
+    "underFireData": "return nil"
+  }
+}

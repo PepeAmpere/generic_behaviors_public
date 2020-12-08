@@ -1,0 +1,59 @@
+{
+  "name": "move and observe",
+  "id": "3187b03f-21a9-456e-a1e8-a44c3afdd55f",
+  "type": "sequence",
+  "subtrees": [
+    {
+      "name": "Do reaction OR move",
+      "id": "d09dc847-c560-44ef-bc69-c59527a71748",
+      "type": "reference",
+      "target": [
+        "generic_behaviors_public",
+        "soldierReaction"
+      ],
+      "arguments": {
+        "orderData": "return arg.orderData",
+        "defaultBehaviorPath": "bb.orders.move"
+      }
+    },
+    {
+      "name": "Observe",
+      "id": "db0ebe2c-8fa2-4623-bc7d-024e89f1f96e",
+      "type": "reference",
+      "target": [
+        "generic_behaviors_public",
+        "soldierObserve"
+      ],
+      "arguments": {
+        "orderData": "return arg.orderData"
+      }
+    }
+  ],
+  "meta": {
+    "nodesInfo": [
+      {
+        "id": "3187b03f-21a9-456e-a1e8-a44c3afdd55f",
+        "position": "1900,120.5"
+      },
+      {
+        "id": "d09dc847-c560-44ef-bc69-c59527a71748",
+        "position": "1762.5,233"
+      },
+      {
+        "id": "db0ebe2c-8fa2-4623-bc7d-024e89f1f96e",
+        "position": "2012.5,233"
+      }
+    ],
+    "editorObjects": [],
+    "canvasSize": "3840,2408",
+    "gridPadding": "0,8"
+  },
+  "parameters": [
+    {
+      "name": "orderData",
+      "isOptional": false,
+      "defaultValue": ""
+    }
+  ],
+  "locals": {}
+}

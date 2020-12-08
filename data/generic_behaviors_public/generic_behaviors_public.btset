@@ -1,0 +1,38 @@
+{
+  "name": "generic_behaviors_public",
+  "trees": [
+    "soldier\\soldierDismount.bt",
+    "soldier\\soldierFight.bt",
+    "soldier\\soldierFireAtWill.bt",
+    "soldier\\soldierFollow.bt",
+    "soldier\\soldierFollowEntity.bt",
+    "soldier\\soldierFollowFormation.bt",
+    "soldier\\soldierIdle.bt",
+    "soldier\\soldierMount.bt",
+    "soldier\\soldierMove.bt",
+    "soldier\\soldierObserve.bt",
+    "soldier\\soldierOccupy.bt",
+    "soldier\\soldierReaction.bt",
+    "team\\teamDefaultOccupy.bt",
+    "team\\teamDismount.bt",
+    "team\\teamFollowEntityInColumn.bt",
+    "team\\teamFollowEntityInFormation.bt",
+    "team\\teamFollowFormationInColumn.bt",
+    "team\\teamFollowFormationInFormation.bt",
+    "team\\teamMount.bt",
+    "team\\teamMoveInColumn.bt",
+    "team\\teamMoveInFormation.bt",
+    "team\\teamUrbanOccupyFloor.bt",
+    "genericRoot.bt"
+  ],
+  "initScripts": [
+    "debug.lua",
+    "draw.lua",
+    "message.lua",
+    "orbat.lua",
+    "tableExt.lua"
+  ],
+  "parameters": {},
+  "capabilities": {},
+  "dynamicTargets": []
+}

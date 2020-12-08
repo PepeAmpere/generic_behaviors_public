@@ -1,0 +1,31 @@
+{
+  "name": "Do reaction OR Observe",
+  "id": "ca4a0f0c-c7dc-4662-aa13-fcbe4c12b6e2",
+  "type": "reference",
+  "meta": {
+    "nodesInfo": [
+      {
+        "id": "ca4a0f0c-c7dc-4662-aa13-fcbe4c12b6e2",
+        "position": "1750,175"
+      }
+    ],
+    "editorObjects": [],
+    "canvasSize": "3840,2400"
+  },
+  "target": [
+    "generic_behaviors_public",
+    "soldierReaction"
+  ],
+  "arguments": {
+    "orderData": "return arg.orderData",
+    "defaultBehaviorPath": "bb.orders.idle"
+  },
+  "parameters": [
+    {
+      "name": "orderData",
+      "isOptional": false,
+      "defaultValue": ""
+    }
+  ],
+  "locals": {}
+}

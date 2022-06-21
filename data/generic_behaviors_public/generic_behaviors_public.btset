@@ -1,6 +1,7 @@
 {
   "name": "generic_behaviors_public",
   "trees": [
+    "platoon\\platoonMoveInColumn.bt",
     "soldier\\soldierDismount.bt",
     "soldier\\soldierFight.bt",
     "soldier\\soldierFireAtWill.bt",
@@ -13,6 +14,9 @@
     "soldier\\soldierObserve.bt",
     "soldier\\soldierOccupy.bt",
     "soldier\\soldierReaction.bt",
+    "soldier\\soldierStandaloneMove.bt",
+    "squad\\squadFollowInColumn.bt",
+    "squad\\squadMoveInColumn.bt",
     "team\\teamDefaultOccupy.bt",
     "team\\teamDismount.bt",
     "team\\teamFollowEntityInColumn.bt",

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # VBSControlEditor Solution File, Format Version 11.00
 Project("{F712A9A3-5D53-4E82-8685-6CD26BEE4F42}") = "generic_behaviors_public", "generic_behaviors_public.btproj", "{EC5E4108-A558-4E27-B35D-D877DB615984}"
 EndProject
-Project("{F712A9A3-5D53-4E82-8685-6CD26BEE4F42}") = "opfor_behaviors_public", "..\..\..\..\opfor_behaviors_public\source\data\opfor_behaviors_public\opfor_behaviors_public.btproj", "{59B20EC6-A96B-407D-83AE-55A6E8D2C851}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|x86 = Default|x86
@@ -12,8 +10,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EC5E4108-A558-4E27-B35D-D877DB615984}.Default|x86.ActiveCfg = Default|x86
 		{EC5E4108-A558-4E27-B35D-D877DB615984}.Default|x86.Build.0 = Default|x86
-		{59B20EC6-A96B-407D-83AE-55A6E8D2C851}.Default|x86.ActiveCfg = Default|x86
-		{59B20EC6-A96B-407D-83AE-55A6E8D2C851}.Default|x86.Build.0 = Default|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

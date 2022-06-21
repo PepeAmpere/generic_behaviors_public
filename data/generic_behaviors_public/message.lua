@@ -108,6 +108,7 @@ return {
                     orderParameters
                 )
             )
+            -- debug.Log(self, receiver, orderName, orderParameters)
         end,
         
         -- @description Debugging function allowing you to store all messages received in given frame

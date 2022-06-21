@@ -218,16 +218,15 @@
     },
     {
       "name": "set end stance",
-      "id": "ae7a9774-fb0f-4820-8e0b-3b121734198e",
+      "id": "8eabaaf6-19b3-424a-8f6d-0a23356abec5",
       "type": "setStance",
       "stance": [
-        "local endStance = arg.orderData.endStance",
+        "local stances = {",
+        "    Stance.Prone,",
+        "    Stance.Crouched",
+        "}",
         "",
-        "if (endStance == nil) then",
-        "    endStance = self:GetStance()",
-        "end",
-        "",
-        "return endStance"
+        "return Stance.Crouched"
       ]
     },
     {
@@ -253,27 +252,32 @@
       "type": "scriptAction",
       "script": [
         "local receivers = message.MakeListOfReceivers(arg.orderData)",
-        "",
         "message.ReportOrderCompleted(receivers, arg.orderData)"
       ]
     }
   ],
   "unlinked-trees": [
     {
-      "name": "go crouch",
-      "id": "e2711d57-3026-4914-8e18-b1389673aeca",
+      "name": "set end stance",
+      "id": "ae7a9774-fb0f-4820-8e0b-3b121734198e",
       "type": "setStance",
       "meta": {
         "nodesInfo": [
           {
-            "id": "e2711d57-3026-4914-8e18-b1389673aeca",
-            "position": "2667.08928571429,621.5"
+            "id": "ae7a9774-fb0f-4820-8e0b-3b121734198e",
+            "position": "2592.08928571429,659"
           }
         ],
         "editorObjects": []
       },
       "stance": [
-        "return Stance.Crouched"
+        "local endStance = arg.orderData.endStance",
+        "",
+        "if (endStance == nil) then",
+        "    endStance = self:GetStance()",
+        "end",
+        "",
+        "return endStance"
       ]
     },
     {
@@ -390,8 +394,8 @@
         "position": "2367.08928571429,734"
       },
       {
-        "id": "ae7a9774-fb0f-4820-8e0b-3b121734198e",
-        "position": "2017.08928571429,559"
+        "id": "8eabaaf6-19b3-424a-8f6d-0a23356abec5",
+        "position": "2004.58928571429,546.5"
       },
       {
         "id": "e83adad5-79db-49ae-95d1-f39e489b6a82",

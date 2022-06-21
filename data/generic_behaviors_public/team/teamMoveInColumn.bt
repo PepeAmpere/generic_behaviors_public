@@ -78,6 +78,7 @@
                     "        -- mandatory",
                     "        position = arg.orderData.position,",
                     "        -- optional",
+                    "        reportCompletedToParent = true,",
                     "    },",
                     "    arg.orderData -- copy of current level orderData",
                     "    -- presetName (optional)",
@@ -142,10 +143,14 @@
           "id": "9f242520-b69b-4fde-a183-e5c9fd1784c4",
           "type": "messageHandler",
           "handler": [
+            "--[[",
             "loc.childElementsInPositions[msg.sender] = message.ValidateOrderCompleted(",
             "    msg, -- full message table",
             "    \"occupy\" -- behaviorName used in MSG sender script action",
-            ")"
+            ")",
+            "DebugLog(msg.sender .. \" \" .. msg.value.originalOrderData.orderName)",
+            "]]--",
+            "loc.childElementsInPositions[msg.sender] = true"
           ],
           "subject": "OrderCompleted"
         },

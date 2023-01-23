@@ -57,7 +57,8 @@
         "        -- HIGH LEVEL AUTONOMOUS",
         "        [\"follow\"] = {\"generic_behaviors_public\", \"soldierFollow\"}, -- INPUTS: entity",
         "        [\"observe\"] = {\"generic_behaviors_public\", \"soldierObserve\"},",
-        "        [\"occupy\"] = {\"generic_behaviors_public\", \"soldierOccupy\"}, -- INPUTS: position        ",
+        "        [\"occupy\"] = {\"generic_behaviors_public\", \"soldierOccupy\"}, -- INPUTS: position",
+        "        [\"destroy\"] = {\"generic_behaviors_public\", \"soldierDestroy\"},  -- INPUTS: target ",
         "                ",
         "        -- LOW LEVEL (without reaction)",
         "        [\"fight\"] = {\"generic_behaviors_public\", \"soldierFight\"},",
@@ -112,7 +113,9 @@
           "type": "messageHandler",
           "handler": [
             "loc.newOrderData = msg.value",
-            "loc.resetOnNewOrder = true"
+            "loc.resetOnNewOrder = true",
+            "",
+            "-- DebugLog(msg.value.orderName)"
           ],
           "subject": "NewOrder"
         },
@@ -262,6 +265,18 @@
                   "active": true
                 },
                 {
+                  "name": "Default",
+                  "id": "92d3aeb2-fa87-491f-b8c1-2be8623e4c10",
+                  "type": "reference",
+                  "target": [
+                    "generic_behaviors_public",
+                    "soldierObserve"
+                  ],
+                  "arguments": {
+                    "orderData": "return {}"
+                  }
+                },
+                {
                   "name": "Wait Forever",
                   "id": "6c3460d3-837a-40f0-b7b9-bf13af7d0360",
                   "type": "waitForever"
@@ -356,8 +371,12 @@
         "position": "2075,992.5"
       },
       {
+        "id": "92d3aeb2-fa87-491f-b8c1-2be8623e4c10",
+        "position": "2287.5,867.5"
+      },
+      {
         "id": "6c3460d3-837a-40f0-b7b9-bf13af7d0360",
-        "position": "2337.5,855"
+        "position": "2475,880"
       },
       {
         "id": "38f063bb-e748-4cd5-a113-4750a2215c25",

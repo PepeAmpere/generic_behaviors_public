@@ -54,9 +54,11 @@
         "        -- When adding new order, follow next pattern",
         "        -- [\"orderName\"] = {\"btsetName\", \"treeName\"}",
         "",
+        "        -- HIGH LEVEL OBSERVE/IDLE",
+        "        [\"observe\"] = {\"generic_behaviors_public\", \"soldierObserve\"}, ",
+        "",
         "        -- HIGH LEVEL AUTONOMOUS",
         "        [\"follow\"] = {\"generic_behaviors_public\", \"soldierFollow\"}, -- INPUTS: entity",
-        "        [\"observe\"] = {\"generic_behaviors_public\", \"soldierObserve\"},",
         "        [\"occupy\"] = {\"generic_behaviors_public\", \"soldierOccupy\"}, -- INPUTS: position",
         "        [\"destroy\"] = {\"generic_behaviors_public\", \"soldierDestroy\"},  -- INPUTS: target ",
         "                ",
@@ -73,23 +75,44 @@
         "        [\"standaloneMove\"] = {\"generic_behaviors_public\", \"soldierStandaloneMove\"}, -- INPUTS: position",
         "    },",
         "    team = {",
+        "        -- HIGH LEVEL OBSERVE/IDLE",
+        "        [\"observe\"] = {\"generic_behaviors_public\", \"teamObserve\"},",
+        "        ",
         "        -- HIGH LEVEL AUTONOMOUS",
         "        [\"occupy\"] = {\"generic_behaviors_public\", \"teamDefaultOccupy\"}, -- INPUTS: position",
         "        ",
         "        -- LOW LEVEL (without reaction)",
         "        [\"follow\"] = {\"generic_behaviors_public\", \"teamFollowEntityInColumn\"}, -- INPUTS: entity",
         "        [\"genericReaction\"] = {\"generic_behaviors_public\", \"teamGenericReaction\"}, -- INPUTS: target, boundaries",
-        "        [\"move\"] = {\"generic_behaviors_public\", \"teamMoveInColumn\"}, -- INPUTS: position        ",
+        "        [\"move\"] = {\"generic_behaviors_public\", \"teamMoveInColumn\"}, -- INPUTS: position    ",
         "    },",
         "    squad = {",
+        "        -- HIGH LEVEL OBSERVE/IDLE",
+        "        [\"observe\"] = {\"generic_behaviors_public\", \"squadObserve\"},",
+        "",
+        "        -- HIGH LEVEL AUTONOMOUS",
+        "",
+        "        -- LOW LEVEL (without reaction)",
         "        [\"move\"] = {\"generic_behaviors_public\", \"squadMoveInColumn\"}, -- INPUTS: position",
         "        [\"follow\"] = {\"generic_behaviors_public\", \"squadFollowInColumn\"}, -- INPUTS: position",
         "    },",
         "    platoon = {",
+        "        -- HIGH LEVEL OBSERVE/IDLE",
+        "        [\"observe\"] = {\"generic_behaviors_public\", \"platoonObserve\"},",
+        "",
+        "        -- HIGH LEVEL AUTONOMOUS",
+        "        ",
+        "        -- LOW LEVEL (without reaction)",
         "        [\"move\"] = {\"generic_behaviors_public\", \"platoonMoveInColumn\"}, -- INPUTS: position",
         "        [\"follow\"] = {\"generic_behaviors_public\", \"platoonFollowInColumn\"}, -- INPUTS: position ",
         "    },",
         "    company = {",
+        "        -- HIGH LEVEL OBSERVE/IDLE",
+        "        [\"observe\"] = {\"generic_behaviors_public\", \"companyObserve\"},",
+        "",
+        "         -- HIGH LEVEL AUTONOMOUS",
+        "        ",
+        "        -- LOW LEVEL (without reaction)",
         "        [\"move\"] = {\"generic_behaviors_public\", \"companyMoveInColumn\"}, -- INPUTS: position ",
         "    },",
         "}",
@@ -265,13 +288,10 @@
                   "active": true
                 },
                 {
-                  "name": "Default",
-                  "id": "92d3aeb2-fa87-491f-b8c1-2be8623e4c10",
-                  "type": "reference",
-                  "target": [
-                    "generic_behaviors_public",
-                    "soldierObserve"
-                  ],
+                  "name": "Generic observe (all levels)",
+                  "id": "67b451e2-9747-4e88-8c15-fc4a20364801",
+                  "type": "scriptedReference",
+                  "target": "return bb.orders.observe",
                   "arguments": {
                     "orderData": "return {}"
                   }
@@ -371,12 +391,12 @@
         "position": "2075,992.5"
       },
       {
-        "id": "92d3aeb2-fa87-491f-b8c1-2be8623e4c10",
-        "position": "2287.5,867.5"
+        "id": "67b451e2-9747-4e88-8c15-fc4a20364801",
+        "position": "2275,867.5"
       },
       {
         "id": "6c3460d3-837a-40f0-b7b9-bf13af7d0360",
-        "position": "2475,880"
+        "position": "2512.5,867.5"
       },
       {
         "id": "38f063bb-e748-4cd5-a113-4750a2215c25",

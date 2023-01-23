@@ -1,7 +1,9 @@
 {
   "name": "generic_behaviors_public",
   "trees": [
+    "company\\companyObserve.bt",
     "platoon\\platoonMoveInColumn.bt",
+    "platoon\\platoonObserve.bt",
     "soldier\\soldierDestroy.bt",
     "soldier\\soldierDismount.bt",
     "soldier\\soldierFight.bt",
@@ -17,6 +19,7 @@
     "soldier\\soldierReaction.bt",
     "squad\\squadFollowInColumn.bt",
     "squad\\squadMoveInColumn.bt",
+    "squad\\squadObserve.bt",
     "team\\teamDefaultOccupy.bt",
     "team\\teamDismount.bt",
     "team\\teamFollowEntityInColumn.bt",
@@ -26,6 +29,7 @@
     "team\\teamMount.bt",
     "team\\teamMoveInColumn.bt",
     "team\\teamMoveInFormation.bt",
+    "team\\teamObserve.bt",
     "team\\teamUrbanOccupyFloor.bt",
     "genericRoot.bt"
   ],

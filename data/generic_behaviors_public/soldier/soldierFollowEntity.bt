@@ -308,12 +308,9 @@
             },
             {
               "name": "Idle",
-              "id": "d5d2b2bc-21e9-42aa-98c3-816cc37cd5ab",
-              "type": "reference",
-              "target": [
-                "generic_behaviors_public",
-                "soldierIdle"
-              ],
+              "id": "ca603f69-6170-4a92-9905-ab11c668e623",
+              "type": "scriptedReference",
+              "target": "return bb.orders.idle",
               "arguments": {
                 "orderData": "return arg.orderData"
               }
@@ -496,8 +493,8 @@
         "position": "3100,1271.85396825396"
       },
       {
-        "id": "d5d2b2bc-21e9-42aa-98c3-816cc37cd5ab",
-        "position": "1950,784.353968253968"
+        "id": "ca603f69-6170-4a92-9905-ab11c668e623",
+        "position": "1937.5,771.853968253968"
       },
       {
         "id": "49df6373-5e00-4ecd-b3f9-26c3d9d659c8",

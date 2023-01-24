@@ -140,12 +140,9 @@
         },
         {
           "name": "Idle",
-          "id": "94047f66-c427-4edc-b013-21c19c5f0f5c",
-          "type": "reference",
-          "target": [
-            "generic_behaviors_public",
-            "soldierIdle"
-          ],
+          "id": "72959560-c928-4604-81d1-26348fbe56cc",
+          "type": "scriptedReference",
+          "target": "return bb.orders.idle",
           "arguments": {
             "orderData": "return arg.orderData"
           }
@@ -280,8 +277,8 @@
         "position": "2262.5,943.5"
       },
       {
-        "id": "94047f66-c427-4edc-b013-21c19c5f0f5c",
-        "position": "2000,531"
+        "id": "72959560-c928-4604-81d1-26348fbe56cc",
+        "position": "2000,518.5"
       },
       {
         "id": "bea8cd80-d79e-4199-bc62-58ae9b5ffc41",

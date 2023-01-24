@@ -4,26 +4,20 @@
   "type": "sequence",
   "subtrees": [
     {
-      "name": "Do reaction OR move",
-      "id": "d09dc847-c560-44ef-bc69-c59527a71748",
-      "type": "reference",
-      "target": [
-        "generic_behaviors_public",
-        "soldierReaction"
-      ],
+      "name": "Reaction behavior OR move",
+      "id": "40994d46-e80e-42c3-bb92-12f8c1fd5dba",
+      "type": "scriptedReference",
+      "target": "return bb.orders.genericReaction",
       "arguments": {
         "orderData": "return arg.orderData",
-        "defaultBehaviorPath": "bb.orders.move"
+        "defaultBehaviorPath": "return bb.orders.move"
       }
     },
     {
       "name": "Observe",
-      "id": "db0ebe2c-8fa2-4623-bc7d-024e89f1f96e",
-      "type": "reference",
-      "target": [
-        "generic_behaviors_public",
-        "soldierObserve"
-      ],
+      "id": "39fd28a7-21d6-4bf0-b788-9068e0bcde88",
+      "type": "scriptedReference",
+      "target": "return bb.orders.observe",
       "arguments": {
         "orderData": "return arg.orderData"
       }
@@ -36,12 +30,12 @@
         "position": "1900,120.5"
       },
       {
-        "id": "d09dc847-c560-44ef-bc69-c59527a71748",
-        "position": "1762.5,233"
+        "id": "40994d46-e80e-42c3-bb92-12f8c1fd5dba",
+        "position": "1750,233"
       },
       {
-        "id": "db0ebe2c-8fa2-4623-bc7d-024e89f1f96e",
-        "position": "2012.5,233"
+        "id": "39fd28a7-21d6-4bf0-b788-9068e0bcde88",
+        "position": "2037.5,233"
       }
     ],
     "editorObjects": [],

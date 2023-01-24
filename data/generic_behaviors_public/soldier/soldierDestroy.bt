@@ -62,8 +62,8 @@
             },
             {
               "name": "Fire",
-              "id": "c08903f6-c3cd-46b5-a6ce-e6443a681bf7",
-              "type": "reference",
+              "id": "349f7b88-9b08-4453-a555-fef2df5ba6d6",
+              "type": "scriptedReference",
               "decorators": [
                 {
                   "id": "8e136d1f-1bbb-4b67-be99-81fd2cd3459b",
@@ -80,10 +80,7 @@
                   }
                 }
               ],
-              "target": [
-                "generic_behaviors_public",
-                "soldierFireAtWill"
-              ],
+              "target": "return bb.orders.fire",
               "arguments": {
                 "orderData": "return arg.orderData"
               }
@@ -114,16 +111,13 @@
                       ]
                     },
                     {
-                      "name": "Do reaction OR move",
-                      "id": "19d0e2bd-dd57-44a4-8b48-7ab87acb2690",
-                      "type": "reference",
-                      "target": [
-                        "generic_behaviors_public",
-                        "soldierReaction"
-                      ],
+                      "name": "Reaction behavior OR move",
+                      "id": "4ce00472-f3d8-4d44-a09a-dfd7de2b683e",
+                      "type": "scriptedReference",
+                      "target": "return bb.orders.genericReaction",
                       "arguments": {
                         "orderData": "return loc.suborderData",
-                        "defaultBehaviorPath": "bb.orders.move"
+                        "defaultBehaviorPath": "return bb.orders.move"
                       }
                     },
                     {
@@ -153,9 +147,9 @@
                     {
                       "id": "c44554ff-f96f-40e8-9642-5b6559fa1caa",
                       "type": "scriptCondition",
-                      "name": "distance < 50m",
+                      "name": "distance < 70m",
                       "script": [
-                        "return loc.path:Length() < 50"
+                        "return loc.path:Length() < 70"
                       ]
                     }
                   ]
@@ -181,16 +175,13 @@
                       ]
                     },
                     {
-                      "name": "Do reaction OR move",
-                      "id": "1b91f71a-d24e-4f3b-bef3-0fe9110e5cc3",
-                      "type": "reference",
-                      "target": [
-                        "generic_behaviors_public",
-                        "soldierReaction"
-                      ],
+                      "name": "Reaction behavior OR move",
+                      "id": "7ba2276a-5252-4f36-a1c9-8326c52edf6d",
+                      "type": "scriptedReference",
+                      "target": "return bb.orders.genericReaction",
                       "arguments": {
                         "orderData": "return loc.suborderData",
-                        "defaultBehaviorPath": "bb.orders.move"
+                        "defaultBehaviorPath": "return bb.orders.move"
                       }
                     }
                   ]
@@ -339,11 +330,19 @@
       },
       {
         "id": "1ab68401-b0a8-4e6a-ab5e-dc4ec3a49013",
-        "position": "1464.5,297"
+        "position": "1475,298"
       },
       {
         "id": "9fb0c9f6-0066-43e3-94a1-8de4a8b64de4",
         "position": "2087.25,288.4"
+      },
+      {
+        "id": "356f1c56-a244-47e1-ae2c-d4bcec2bf588",
+        "position": "2212.5,538"
+      },
+      {
+        "id": "f0ae3392-9a37-4610-81a5-764ad319e6a8",
+        "position": "2225,798"
       },
       {
         "id": "07e91427-afbc-42aa-9a76-f4f5440fe4fa",
@@ -363,11 +362,11 @@
       },
       {
         "id": "2594fb2c-8fa9-44e8-89f4-2b90eb04ab4d",
-        "position": "1162.5,748"
+        "position": "775,1135.5"
       },
       {
-        "id": "c08903f6-c3cd-46b5-a6ce-e6443a681bf7",
-        "position": "1425,748"
+        "id": "349f7b88-9b08-4453-a555-fef2df5ba6d6",
+        "position": "1025,1135.5"
       },
       {
         "id": "6227b44d-ce56-4c52-84e0-dfece017373f",
@@ -375,35 +374,35 @@
       },
       {
         "id": "6d846dc8-bed5-45cd-9d74-a0107633c2e4",
-        "position": "1575,985.5"
+        "position": "1537.5,998"
       },
       {
         "id": "0881b719-bdbb-4ac6-8566-ddf2e6c9015d",
-        "position": "1362.5,1160.5"
+        "position": "1325,1173"
       },
       {
-        "id": "19d0e2bd-dd57-44a4-8b48-7ab87acb2690",
-        "position": "1537.5,1173"
+        "id": "4ce00472-f3d8-4d44-a09a-dfd7de2b683e",
+        "position": "1512.5,1173"
       },
       {
         "id": "3298884a-53be-465d-b47e-de792d16b23c",
-        "position": "1712.5,1173"
+        "position": "1737.5,1173"
       },
       {
         "id": "4a25c801-5234-4717-a79b-ae6832578d74",
-        "position": "2087.5,1060.5"
+        "position": "2112.5,1060.5"
       },
       {
         "id": "67027c44-0642-4c97-ac02-db71195b9225",
-        "position": "1900,1160.5"
+        "position": "1912.5,1173"
       },
       {
-        "id": "1b91f71a-d24e-4f3b-bef3-0fe9110e5cc3",
+        "id": "7ba2276a-5252-4f36-a1c9-8326c52edf6d",
         "position": "2087.5,1160.5"
       },
       {
         "id": "5c627338-b428-4257-a44f-b72aec6cfd31",
-        "position": "2225,485.5"
+        "position": "2212.5,460.5"
       },
       {
         "id": "c60d4dab-7725-4c72-b572-993dce4b4cb6",
@@ -431,15 +430,15 @@
       },
       {
         "id": "7a303633-50fd-4d25-97a4-473186d266a7",
-        "position": "2225,798"
+        "position": "2250,835.5"
       },
       {
         "id": "18252585-34a4-4a9c-9382-9694acd6d697",
-        "position": "2375,873"
+        "position": "2400,910.5"
       },
       {
         "id": "b9536017-a074-481e-9a89-e3a9d148d79b",
-        "position": "2575,873"
+        "position": "2575,910.5"
       },
       {
         "id": "38ab0f42-8380-445d-bd53-91adcdbfeb55",
@@ -471,6 +470,32 @@
         "headerBackground": "#FFB26B00",
         "headerForeground": "#FFFFFFFF",
         "boxBackground": "#FF99FF00",
+        "boxForeground": "#FF000000"
+      },
+      {
+        "id": "356f1c56-a244-47e1-ae2c-d4bcec2bf588",
+        "type": "comment",
+        "header": "What is shortest path to target which was valid in last few seconds?",
+        "body": "",
+        "bodyAlignment": "Left",
+        "width": 864.49999999999955,
+        "height": 174.0,
+        "headerBackground": "#FF87CEFA",
+        "headerForeground": "#FF000000",
+        "boxBackground": "#FFF0FFFF",
+        "boxForeground": "#FF000000"
+      },
+      {
+        "id": "f0ae3392-9a37-4610-81a5-764ad319e6a8",
+        "type": "comment",
+        "header": "Do I see the target of my tracking?",
+        "body": "",
+        "bodyAlignment": "Left",
+        "width": 864.49999999999955,
+        "height": 174.0,
+        "headerBackground": "#FF87CEFA",
+        "headerForeground": "#FF000000",
+        "boxBackground": "#FFF0FFFF",
         "boxForeground": "#FF000000"
       }
     ],

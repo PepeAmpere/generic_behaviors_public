@@ -1,24 +1,21 @@
 {
-  "name": "Do reaction OR Observe",
-  "id": "ca4a0f0c-c7dc-4662-aa13-fcbe4c12b6e2",
-  "type": "reference",
+  "name": "Reaction behavior OR Idle",
+  "id": "45d73b70-7ffc-4e50-bad7-cbae0da0824a",
+  "type": "scriptedReference",
   "meta": {
     "nodesInfo": [
       {
-        "id": "ca4a0f0c-c7dc-4662-aa13-fcbe4c12b6e2",
-        "position": "1750,175"
+        "id": "45d73b70-7ffc-4e50-bad7-cbae0da0824a",
+        "position": "1687.5,200"
       }
     ],
     "editorObjects": [],
     "canvasSize": "3840,2400"
   },
-  "target": [
-    "generic_behaviors_public",
-    "soldierReaction"
-  ],
+  "target": "return bb.orders.genericReaction",
   "arguments": {
     "orderData": "return arg.orderData",
-    "defaultBehaviorPath": "bb.orders.idle"
+    "defaultBehaviorPath": "return bb.orders.idle"
   },
   "parameters": [
     {

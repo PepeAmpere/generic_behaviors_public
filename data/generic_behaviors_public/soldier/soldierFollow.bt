@@ -9,9 +9,9 @@
       "type": "selector",
       "subtrees": [
         {
-          "name": "Do reaction OR follow",
-          "id": "2fe1898a-8366-4e57-bf55-b177dbb5fd0d",
-          "type": "reference",
+          "name": "Reaction OR move",
+          "id": "40664811-be14-41a2-9a67-fd4d3ed1b4be",
+          "type": "scriptedReference",
           "decorators": [
             {
               "id": "cd95c400-9e6d-4bc4-9ad4-8248052defcb",
@@ -22,26 +22,20 @@
               ]
             }
           ],
-          "target": [
-            "generic_behaviors_public",
-            "soldierReaction"
-          ],
+          "target": "return bb.orders.genericReaction",
           "arguments": {
             "orderData": "return arg.orderData",
-            "defaultBehaviorPath": "bb.orders.followEntity"
+            "defaultBehaviorPath": "return bb.orders.followEntity"
           }
         },
         {
-          "name": "Do reaction OR followFormation",
-          "id": "416847af-feb4-4163-80e7-827039e5bc5b",
-          "type": "reference",
-          "target": [
-            "generic_behaviors_public",
-            "soldierReaction"
-          ],
+          "name": "Reaction OR move",
+          "id": "69767fca-c601-4b8c-be55-2b6da6d9d290",
+          "type": "scriptedReference",
+          "target": "return bb.orders.genericReaction",
           "arguments": {
             "orderData": "return arg.orderData",
-            "defaultBehaviorPath": "bb.orders.followFormation"
+            "defaultBehaviorPath": "return bb.orders.followFormation"
           }
         }
       ],
@@ -74,12 +68,12 @@
         "position": "1437.5,348.875"
       },
       {
-        "id": "2fe1898a-8366-4e57-bf55-b177dbb5fd0d",
-        "position": "1250,523.875"
+        "id": "40664811-be14-41a2-9a67-fd4d3ed1b4be",
+        "position": "1250,511.375"
       },
       {
-        "id": "416847af-feb4-4163-80e7-827039e5bc5b",
-        "position": "1475,573.875"
+        "id": "69767fca-c601-4b8c-be55-2b6da6d9d290",
+        "position": "1550,548.875"
       },
       {
         "id": "48cc34a6-9560-4b17-9eb0-58331ee3c939",

@@ -118,7 +118,7 @@ class CfgAvailableBehaviors
 	};
 	class generic_team_noorder_public
 	{
-		icon = "\core\addons\plugins\generic_behaviors_public\data\generic_team_move_public.paa";
+		icon = "\core\addons\plugins\generic_behaviors_public\data\generic_team_occupy_public.paa";
 		allowRotate = true;
 
 		identity = "generic_team";

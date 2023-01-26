@@ -22,7 +22,7 @@
               ]
             }
           ],
-          "target": "return bb.orders.genericReaction",
+          "target": "return bb.orders.reaction",
           "arguments": {
             "orderData": "return arg.orderData",
             "defaultBehaviorPath": "return bb.orders.followEntity"
@@ -32,7 +32,7 @@
           "name": "Reaction OR move",
           "id": "69767fca-c601-4b8c-be55-2b6da6d9d290",
           "type": "scriptedReference",
-          "target": "return bb.orders.genericReaction",
+          "target": "return bb.orders.reaction",
           "arguments": {
             "orderData": "return arg.orderData",
             "defaultBehaviorPath": "return bb.orders.followFormation"

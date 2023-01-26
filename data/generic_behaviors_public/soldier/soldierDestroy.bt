@@ -114,11 +114,24 @@
                       "name": "Reaction behavior OR move",
                       "id": "4ce00472-f3d8-4d44-a09a-dfd7de2b683e",
                       "type": "scriptedReference",
-                      "target": "return bb.orders.genericReaction",
+                      "target": "return bb.orders.reaction",
                       "arguments": {
                         "orderData": "return loc.suborderData",
-                        "defaultBehaviorPath": "return bb.orders.move"
+                        "defaultBehaviorPath": "return bb.orders.moveCarefully"
                       }
+                    },
+                    {
+                      "name": "set end stance",
+                      "id": "26fe1abf-0676-46bd-8442-cea1ff77abfa",
+                      "type": "setStance",
+                      "stance": [
+                        "local stances = {",
+                        "    Stance.Prone,",
+                        "    Stance.Crouched",
+                        "}",
+                        "",
+                        "return Stance.Crouched"
+                      ]
                     },
                     {
                       "name": "observe for a while",
@@ -178,10 +191,10 @@
                       "name": "Reaction behavior OR move",
                       "id": "7ba2276a-5252-4f36-a1c9-8326c52edf6d",
                       "type": "scriptedReference",
-                      "target": "return bb.orders.genericReaction",
+                      "target": "return bb.orders.reaction",
                       "arguments": {
                         "orderData": "return loc.suborderData",
-                        "defaultBehaviorPath": "return bb.orders.move"
+                        "defaultBehaviorPath": "return bb.orders.moveFast"
                       }
                     }
                   ]
@@ -358,47 +371,51 @@
       },
       {
         "id": "192bd749-7a7d-4b8f-bbfc-4d36241047d0",
-        "position": "1862.5,560.5"
+        "position": "1850,823"
       },
       {
         "id": "2594fb2c-8fa9-44e8-89f4-2b90eb04ab4d",
-        "position": "775,1135.5"
+        "position": "962.5,1398"
       },
       {
         "id": "349f7b88-9b08-4453-a555-fef2df5ba6d6",
-        "position": "1025,1135.5"
+        "position": "1212.5,1398"
       },
       {
         "id": "6227b44d-ce56-4c52-84e0-dfece017373f",
-        "position": "1862.5,760.5"
+        "position": "1850,1023"
       },
       {
         "id": "6d846dc8-bed5-45cd-9d74-a0107633c2e4",
-        "position": "1537.5,998"
+        "position": "1712.5,1260.5"
       },
       {
         "id": "0881b719-bdbb-4ac6-8566-ddf2e6c9015d",
-        "position": "1325,1173"
+        "position": "1500,1448"
       },
       {
         "id": "4ce00472-f3d8-4d44-a09a-dfd7de2b683e",
-        "position": "1512.5,1173"
+        "position": "1675,1448"
+      },
+      {
+        "id": "26fe1abf-0676-46bd-8442-cea1ff77abfa",
+        "position": "1900,1448"
       },
       {
         "id": "3298884a-53be-465d-b47e-de792d16b23c",
-        "position": "1737.5,1173"
+        "position": "2075,1448"
       },
       {
         "id": "4a25c801-5234-4717-a79b-ae6832578d74",
-        "position": "2112.5,1060.5"
+        "position": "2500,1323"
       },
       {
         "id": "67027c44-0642-4c97-ac02-db71195b9225",
-        "position": "1912.5,1173"
+        "position": "2300,1435.5"
       },
       {
         "id": "7ba2276a-5252-4f36-a1c9-8326c52edf6d",
-        "position": "2087.5,1160.5"
+        "position": "2475,1423"
       },
       {
         "id": "5c627338-b428-4257-a44f-b72aec6cfd31",

@@ -12,7 +12,7 @@
     "editorObjects": [],
     "canvasSize": "3840,2400"
   },
-  "target": "return bb.orders.genericReaction",
+  "target": "return bb.orders.reactionPassive",
   "arguments": {
     "orderData": "return arg.orderData",
     "defaultBehaviorPath": "return bb.orders.idle"

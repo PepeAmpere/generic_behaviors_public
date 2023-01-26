@@ -69,14 +69,14 @@ class CfgFormations
 // Defines the new order as available from the Control AI - Military
 class CfgAvailableBehaviors
 {
-	class generic_team_move_public
+	class generic_team_occupy_public
 	{
-		icon = "\core\addons\plugins\generic_behaviors_public\data\generic_team_move_public.paa";
+		icon = "\core\addons\plugins\generic_behaviors_public\data\generic_team_occupy_public.paa";
 		allowRotate = true;
 
 		identity = "generic_team";
-		displayname = "Public FT Move";
-		description = "Public specific fireteam move";				
+		displayname = "Public FT Occupy";
+		description = "Public generic fireteam occupy";				
 
 		//displayCondition = "\core\addons\plugins\generic_behaviors_public\data\scripts\waypointDisplayCondition.sqf";
 
@@ -93,7 +93,54 @@ class CfgAvailableBehaviors
 			class orderName
 			{
 				displayName = "orderName";
-				value = "move";
+				value = "occupy";
+				type = "string";
+			}
+			class orderParameters
+			{
+				displayName = "orderParameters";
+				value = "";
+				type = "table";
+			};
+			class reportCompletedToExternal
+			{
+				displayName = "reportCompletedToExternal";
+				value = "true";
+				type = "boolean";
+			};
+			class debugEnabled
+			{
+				displayName = "debugEnabled";
+				value = "false";
+				type = "boolean";
+			};
+		};
+	};
+	class generic_team_noorder_public
+	{
+		icon = "\core\addons\plugins\generic_behaviors_public\data\generic_team_move_public.paa";
+		allowRotate = true;
+
+		identity = "generic_team";
+		displayname = "Public FT No Order (testing only)";
+		description = "Testing waypoint";				
+
+		//displayCondition = "\core\addons\plugins\generic_behaviors_public\data\scripts\waypointDisplayCondition.sqf";
+
+		newOrderSubject = "NewOrder";
+		
+		class RootBehaviors
+		{
+			group[] = {"generic_behaviors_public", "genericRoot"};
+			entity[] = {"generic_behaviors_public", "genericRoot"};
+		};
+		
+		class Parameters
+		{
+			class orderName
+			{
+				displayName = "orderName";
+				value = "noOrder";
 				type = "string";
 			}
 			class orderParameters
